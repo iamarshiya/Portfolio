@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <img src="logo.jpg" class="logo" alt="Logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="MyWork.html">RESUME</a></li>            
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="me.jpeg" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Arshiya Attar, currently pursuing my studies at MITAOE. My passion for electronics and programming drives my academic pursuits and extracurricular activities. With a keen interest in understanding how things work and a knack for problem-solving, I immerse myself in projects that integrate both hardware and software elements. From designing circuits to writing code, I find joy in the process of bringing ideas to life. I am continuously honing my skills in electronics and programming, eager to contribute to the ever-evolving fields of technology and engineering.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>                        
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Moderate Level</li>
+                            <li><span>C Language</span><br>Moderate Level</li>
+                            <li><span>Web Development</span><br>Web Pages Designing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - 2027</span><br>MITAOE B.TECH <span> <br> Electronics and Telecommunication</span></li>
+                            <li><span>2022 - 2023</span><br>Senior Secondary <span><br>VidyaValley International School</span></li>
+                            <li><span>2021 - 2022</span><br>Higher Secondary <span> <br> Elpro International School</span></li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function opentab(tabname) {
+            let tabLinks = document.getElementsByClassName("tab-links");
+            let tabContents = document.getElementsByClassName("tab-contents");
+
+            for (let tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (let tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
